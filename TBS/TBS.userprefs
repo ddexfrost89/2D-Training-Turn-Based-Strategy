@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CameraControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UserControl.cs">
     <Files>
-      <File FileName="Assets\CameraControl.cs" Line="45" Column="67" />
+      <File FileName="Assets\UserControl.cs" Line="37" Column="77" />
+      <File FileName="Assets\GameControl.cs" Line="29" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

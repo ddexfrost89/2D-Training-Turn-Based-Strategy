@@ -53,9 +53,9 @@ public class CameraControl : MonoBehaviour {
 		else if(DS)
 			StepDown();
 		transform.position = transform.position + Step*Time.fixedDeltaTime;
-		if(ZI)
+		if(ZI && Camera.current.orthographicSize > 1)
 			Camera.current.orthographicSize = Camera.current.orthographicSize - Time.fixedDeltaTime;
-		else if(ZO)
+		else if(ZO && Camera.current.orthographicSize < 20)
 			Camera.current.orthographicSize = Camera.current.orthographicSize + Time.fixedDeltaTime;
 		StepStop ();
 	}

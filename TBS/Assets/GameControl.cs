@@ -4,8 +4,9 @@ using System.Collections;
 public class GameControl : MonoBehaviour {
 
 
-	int childnumber = 0;
-	int activechild = -1;
+	private int childnumber = 0;
+	private GameObject activechild = null;
+	public GameObject targetchild = null;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,18 @@ public class GameControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		if(Input.GetKeyDown(KeyCode.Mouse0)){
+			if (targetchild != null) {
+				if(activechild == null){
+					activechild = targetchild;
+				}
+				else if(targetchild != activechild){
+					activechild = null;
+				}
+				targetchild = null;
+			}
+			else {
+			}
+		}
 	}
 }
