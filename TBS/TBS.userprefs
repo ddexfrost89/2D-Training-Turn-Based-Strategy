@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UserControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Tim\Documents\GitHub\2D-Training-Turn-Based-Strategy\TBS\Assets\GameControl.cs">
     <Files>
-      <File FileName="Assets\UserControl.cs" Line="37" Column="77" />
-      <File FileName="Assets\GameControl.cs" Line="29" Column="23" />
+      <File FileName="Assets\UserControl.cs" Line="38" Column="19" />
+      <File FileName="c:\Users\Tim\Documents\GitHub\2D-Training-Turn-Based-Strategy\TBS\Assets\GameControl.cs" Line="34" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

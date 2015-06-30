@@ -29,6 +29,10 @@ public class GameControl : MonoBehaviour {
 				targetchild = null;
 			}
 			else {
+				if(activechild != null){
+					activechild.GetComponent<UserControl>().Move();
+					activechild = null;
+				}
 			}
 		}
 	}

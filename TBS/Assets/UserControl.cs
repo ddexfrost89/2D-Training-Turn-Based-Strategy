@@ -4,20 +4,33 @@ using System.Collections;
 public class UserControl : MonoBehaviour {
 	
 	private Vector3 MP;//  mouse position
-	public Vector3 SMP;// screen mouse position
-	private Vector3 Scale;
-	private Vector3 teststep = new Vector3(1, 0, 0);
-	public int number;
-	public int type;
+	private Vector3 SMP;// screen mouse position
+	private Vector3 MMP;// mouse position in move function
+	private Vector3 MSMP;// screen mouse position in move function
+	private float energy;
+	private const float maxenergy = 10;
+	private float radius;
+	private Vector3 MV; // move vector
 
 	// Use this for initialization
 	void Start () {
-	
+		energy = maxenergy;
+		radius = transform.lossyScale.x / 2;
+	}
+
+	public void Move(){
+		MMP = Input.mousePosition;
+		MSMP = Camera.main.ScreenToWorldPoint(MP);
+		MV = new Vector3 (MSMP.x, MSMP.y, transform.position.z);
+		MV = MV - transform.position;
+		RaycastHit help;
+		if (!Physics.SphereCast(transform.position, radius, MV, out help, MV.magnitude)){
+			transform.position = transform.position + MV;
+		}
 	}
 
 	private bool IsMouseIn(){
 		SMP = Camera.main.ScreenToWorldPoint(MP);
-		Scale = transform.lossyScale;
 		Ray myray = new Ray (new Vector3(SMP.x, SMP.y, -9899), new Vector3(0, 0, 1));
 		RaycastHit help;
 		if (Physics.Raycast(myray, out help))
