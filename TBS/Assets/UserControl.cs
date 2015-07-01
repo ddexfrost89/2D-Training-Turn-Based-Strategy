@@ -31,7 +31,7 @@ public class UserControl : MonoBehaviour {
 
 	private bool IsMouseIn(){
 		SMP = Camera.main.ScreenToWorldPoint(MP);
-		Ray myray = new Ray (new Vector3(SMP.x, SMP.y, -9899), new Vector3(0, 0, 1));
+		Ray myray = new Ray (new Vector3(SMP.x, SMP.y, -9999), new Vector3(0, 0, 1));
 		RaycastHit help;
 		if (Physics.Raycast(myray, out help))
 				if(help.collider.gameObject == gameObject)

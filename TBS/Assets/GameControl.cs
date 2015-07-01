@@ -4,19 +4,34 @@ using System.Collections;
 public class GameControl : MonoBehaviour {
 
 
-	private int childnumber = 0;
-	private GameObject activechild = null;
+	public int unitnumber = 0;
+	private int buildingnumber = 0;
+	private int workernumber = 0;
+	public GameObject activechild = null;
 	public GameObject targetchild = null;
-	public bool IsEntering = false;
-	public bool IsMenu = false;
-	public string EntS = ""; // Entering String
+	private bool IsEntering = false;
+	private bool IsMenu = false;
+	private string EntS = ""; // Entering String
+	private GameObject UnitSample;
+	private GameObject BuildingSample;
+	private GameObject WorkerSample;
+	private const int MaxUnits = 999;
 
 	// Use this for initialization
 	void Start () {
-	
+		UnitSample = transform.Find ("Unit_1000").gameObject;
 	}
 
-	void AddChild(){
+	void AddUnit(Vector3 CreationPos){
+		if (unitnumber < MaxUnits) {
+			GameObject newunit = (GameObject)Instantiate (UnitSample,
+		                                              	  CreationPos,
+		                                              		transform.rotation);
+			newunit.name = "unit_" + unitnumber.ToString();
+			newunit.transform.parent = gameObject.transform;
+			newunit.transform.localScale = newunit.transform.lossyScale;
+			unitnumber++;
+		}
 	}
 
 	void ShowMenu(){
@@ -75,6 +90,9 @@ public class GameControl : MonoBehaviour {
 				EntS = EntS.Remove (EntS.Length - 1);
 			} else 
 				EntS = EntS + LetterEnt ();
+		}
+		if (Input.GetKeyDown (KeyCode.LeftControl)) {
+			AddUnit(new Vector3 (4, 4, -1));
 		}
 	}
 }
