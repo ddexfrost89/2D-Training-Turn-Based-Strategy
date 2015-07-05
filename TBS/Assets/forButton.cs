@@ -12,7 +12,7 @@ public class forButton : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		if (GUI.Button (new Rect (0, Screen.height - 30, 75, 20), "Press me")) {
+		if (GUI.Button (new Rect (0, Screen.height - 50, 75, 40), "Next Turn")) {
 			ButtonFunction();
 		}
 	}
