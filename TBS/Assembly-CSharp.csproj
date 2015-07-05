@@ -51,9 +51,12 @@
      <Compile Include="Assets\GameControl.cs" />
      <Compile Include="Assets\SpecialrulesClass.cs" />
      <Compile Include="Assets\UnitClass.cs" />
+     <Compile Include="Assets\UnitsClass.cs" />
      <Compile Include="Assets\UserControl.cs" />
+     <Compile Include="Assets\XML_preparator.cs" />
      <Compile Include="Assets\forButton.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\db\Units.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
